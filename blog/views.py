@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from .models import Blog
 
-# Create your views here.
+
+def all_blogs(request):
+    allblogs = Blog.objects
+    return render(request, 'blog/allblogs.html', {'blogs': allblogs})
