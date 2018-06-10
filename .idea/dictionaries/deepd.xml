@@ -2,11 +2,14 @@
   <dictionary name="deepd">
     <words>
       <w>allblogs</w>
+      <w>blogobject</w>
       <w>blogs</w>
       <w>djangoportfolio</w>
+      <w>docx</w>
       <w>goswami</w>
       <w>navbar</w>
       <w>pycache</w>
+      <w>thebrocode</w>
     </words>
   </dictionary>
 </component>
