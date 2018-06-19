@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -30,8 +31,8 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
                 <a class="nav-item nav-link" href="#">Facebook</a>
-                <a class="nav-item nav-link" href="#">Resume</a>
-                <a class="nav-item nav-link active" href="#">Blog</a>
+                <a class="nav-item nav-link" href="{% static 'thebrocode.pdf' %}">Resume</a>
+                <a class="nav-item nav-link active" href="{% url 'allblogs' %}">Blog</a>
             </div>
         </div>
     </nav>
@@ -58,7 +59,7 @@
                              src="{{ blog.image.url }}"
                              alt="Card image cap">
                         <div class="card-body">
-                            <a href="#"><p class="card-text">{{ blog.title }}</p></a>
+                            <a href="{% url 'detail' blog.id %}"><p class="card-text">{{ blog.title }}</p></a>
                             <p>{{ blog.pub_date_pretty }}</p>
                             <p>{{ blog.summary }}</p>
                         </div>
